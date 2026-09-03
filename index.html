@@ -1,0 +1,210 @@
+O ChatGPT disse:
+Claro! Abaixo está um site completo e responsivo sobre Alice in Chains, separado em index.html, style.css e script.js. Ele tem visual inspirado no grunge/metal dos anos 90, menu, seção sobre a banda, integrantes, álbuns e um botão interativo.
+
+index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alice in Chains | Grunge & Metal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">ALICE IN CHAINS</div>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#banda">A Banda</a></li>
+                <li><a href="#integrantes">Integrantes</a></li>
+                <li><a href="#albuns">Álbuns</a></li>
+            </ul>
+
+            <button id="themeButton">☾</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <p class="subtitle">SEATTLE • GRUNGE • METAL</p>
+
+                <h1>ALICE<br>IN CHAINS</h1>
+
+                <p class="hero-text">
+                    Uma das bandas mais marcantes da cena de Seattle,
+                    conhecida por seus riffs pesados, harmonias sombrias
+                    e letras intensas.
+                </p>
+
+                <a href="#banda" class="button">EXPLORE A BANDA</a>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="banda" class="section about">
+            <div class="section-title">
+                <span>01</span>
+                <h2>A BANDA</h2>
+            </div>
+
+            <div class="about-content">
+                <div>
+                    <p>
+                        Alice in Chains surgiu em Seattle, Washington,
+                        no final dos anos 1980. A banda tornou-se uma das
+                        principais representantes do movimento grunge,
+                        combinando elementos de heavy metal, rock alternativo
+                        e doom metal.
+                    </p>
+
+                    <p>
+                        Seu som é marcado por riffs densos, vocais
+                        harmonizados e uma atmosfera frequentemente
+                        melancólica e sombria.
+                    </p>
+                </div>
+
+                <div class="quote">
+                    <span>“</span>
+                    Música pesada, emoções ainda mais pesadas.
+                </div>
+            </div>
+        </section>
+
+        <!-- INTEGRANTES -->
+        <section id="integrantes" class="section members">
+            <div class="section-title">
+                <span>02</span>
+                <h2>INTEGRANTES</h2>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="number">01</div>
+                    <h3>Jerry Cantrell</h3>
+                    <p>Guitarra • Vocais</p>
+                    <span class="card-line"></span>
+                </article>
+
+                <article class="card">
+                    <div class="number">02</div>
+                    <h3>Sean Kinney</h3>
+                    <p>Bateria</p>
+                    <span class="card-line"></span>
+                </article>
+
+                <article class="card">
+                    <div class="number">03</div>
+                    <h3>Mike Inez</h3>
+                    <p>Baixo</p>
+                    <span class="card-line"></span>
+                </article>
+
+                <article class="card">
+                    <div class="number">04</div>
+                    <h3>William DuVall</h3>
+                    <p>Vocais • Guitarra</p>
+                    <span class="card-line"></span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ALBUNS -->
+        <section id="albuns" class="section albums">
+
+            <div class="section-title">
+                <span>03</span>
+                <h2>ÁLBUNS</h2>
+            </div>
+
+            <div class="album-grid">
+
+                <article class="album">
+                    <div class="album-cover facelift">
+                        <span>ALICE<br>IN<br>CHAINS</span>
+                    </div>
+
+                    <div class="album-info">
+                        <h3>Facelift</h3>
+                        <p>1990</p>
+                    </div>
+                </article>
+
+                <article class="album">
+                    <div class="album-cover dirt">
+                        <span>DIRT</span>
+                    </div>
+
+                    <div class="album-info">
+                        <h3>Dirt</h3>
+                        <p>1992</p>
+                    </div>
+                </article>
+
+                <article class="album">
+                    <div class="album-cover jar">
+                        <span>JAR<br>OF<br>FLIES</span>
+                    </div>
+
+                    <div class="album-info">
+                        <h3>Jar of Flies</h3>
+                        <p>1994</p>
+                    </div>
+                </article>
+
+                <article class="album">
+                    <div class="album-cover tripod">
+                        <span>ALICE<br>IN<br>CHAINS</span>
+                    </div>
+
+                    <div class="album-info">
+                        <h3>Alice in Chains</h3>
+                        <p>1995</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CURIOSIDADE -->
+        <section class="highlight">
+            <div>
+                <p>VOCÊ SABIA?</p>
+                <h2>Alice in Chains ajudou a definir o som sombrio de Seattle.</h2>
+            </div>
+
+            <button id="randomFact">MOSTRAR CURIOSIDADE</button>
+
+            <p id="fact"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-logo">ALICE IN CHAINS</div>
+
+        <p>
+            Site criado para fins educacionais e de homenagem à banda.
+        </p>
+
+        <p class="copyright">
+            © 2026 — Fan Site
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

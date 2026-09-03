@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+    --black: #080808;
+    --dark: #111111;
+    --gray: #1d1d1d;
+    --light-gray: #999;
+    --white: #eeeeee;
+    --red: #8d1515;
+    --red-light: #c12626;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.92);
+    border-bottom: 1px solid #252525;
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    max-width: 1200px;
+    height: 75px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+.logo,
+.footer-logo {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--red-light);
+}
+
+#themeButton {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #444;
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+#themeButton:hover {
+    background: var(--red);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 10%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.95),
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.9)
+        ),
+        radial-gradient(circle at 70% 50%, #401010, #050505 55%);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitle {
+    color: var(--red-light);
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(70px, 12vw, 160px);
+    line-height: 0.82;
+    letter-spacing: -5px;
+
+    text-shadow: 8px 8px 0 #1b1b1b;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 35px 0;
+
+    color: #aaa;
+    font-size: 14px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: var(--red);
+
+    color: white;
+    text-decoration: none;
+
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--red-light);
+    transform: translateY(-3px);
+}
+
+/* SECTIONS */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 25px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 60px;
+
+    border-bottom: 1px solid #292929;
+    padding-bottom: 20px;
+}
+
+.section-title span {
+    color: var(--red-light);
+    font-size: 13px;
+}
+
+.section-title h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+/* ABOUT */
+
+.about {
+    min-height: 70vh;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.about-content p {
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.quote {
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+    line-height: 1.2;
+
+    color: #ddd;
+
+    border-left: 4px solid var(--red);
+    padding-left: 30px;
+}
+
+.quote span {
+    color: var(--red-light);
+    font-size: 80px;
+    line-height: 0;
+}
+
+/* MEMBERS */
+
+.members {
+    background: #0d0d0d;
+    max-width: none;
+    padding-left: max(25px, calc((100% - 1150px) / 2));
+    padding-right: max(25px, calc((100% - 1150px) / 2));
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+
+    min-height: 250px;
+    padding: 30px;
+
+    background: #151515;
+    border: 1px solid #292929;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--red);
+}
+
+.number {
+    color: var(--red);
+    font-size: 13px;
+    margin-bottom: 70px;
+}
+
+.card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+}
+
+.card p {
+    color: #777;
+    font-size: 12px;
+}
+
+.card-line {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--red);
+}
+
+/* ALBUMS */
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.album-cover {
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+
+    border: 1px solid #333;
+
+    transition: 0.4s;
+}
+
+.album:hover .album-cover {
+    transform: scale(1.03);
+}
+
+.facelift {
+    background:
+        radial-gradient(circle, #7b7770, #242424 65%, #050505);
+}
+
+.dirt {
+    background:
+        linear-gradient(145deg, #5d462c, #17100c);
+    color: #c7a879;
+}
+
+.jar {
+    background:
+        radial-gradient(circle at 30% 30%, #686868, #161616);
+    color: #ddd;
+}
+
+.tripod {
+    background:
+        linear-gradient(135deg, #313131, #080808);
+    color: #bdbdbd;
+}
+
+.album-info {
+    padding: 15px 5px;
+}
+
+.album-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+}
+
+.album-info p {
+    color: var(--red-light);
+    font-size: 12px;
+}
+
+/* HIGHLIGHT */
+
+.highlight {
+    padding: 90px 10%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4b0808,
+            #160303
+        );
+
+    text-align: center;
+}
+
+.highlight p:first-child {
+    color: #df5a5a;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.highlight h2 {
+    max-width: 800px;
+    margin: 15px auto 30px;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    line-height: 1.1;
+}
+
+#randomFact {
+    padding: 13px 25px;
+
+    background: transparent;
+    border: 1px solid #aaa;
+    color: white;
+
+    cursor: pointer;
+
+    font-family: 'Roboto Mono', monospace;
+
+    transition: 0.3s;
+}
+
+#randomFact:hover {
+    background: white;
+    color: black;
+}
+
+#fact {
+    margin-top: 25px;
+    color: #ddd;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 60px 25px;
+
+    text-align: center;
+
+    background: #050505;
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #666;
+    font-size: 11px;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+/* TEMA CLARO */
+
+body.light {
+    --black: #e8e8e8;
+    --dark: #ddd;
+    --gray: #ccc;
+    --white: #111;
+    --light-gray: #555;
+}
+
+body.light header {
+    background: rgba(232, 232, 232, 0.92);
+}
+
+body.light .hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(232,232,232,0.95),
+            rgba(232,232,232,0.7)
+        ),
+        radial-gradient(circle at 70% 50%, #d8a0a0, #ddd);
+}
+
+body.light .members {
+    background: #ddd;
+}
+
+body.light .card {
+    background: #eee;
+    border-color: #ccc;
+}
+
+body.light .album-cover {
+    border-color: #aaa;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .cards,
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 120px 25px 70px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+        letter-spacing: -3px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .cards,
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight {
+        padding: 70px 25px;
+    }
+
+    .highlight h2 {
+        font-size: 32px;
+    }
+}
